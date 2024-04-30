@@ -30,6 +30,10 @@ class Car(models.Model):
     manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE)
     drivers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='cars')
 
+    def manufacturer_name(self):
+        return self.manufacturer.name
+    manufacturer_name.short_description = 'Brand'
+
     class Meta:
         ordering = ("manufacturer", )
 
