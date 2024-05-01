@@ -1,7 +1,5 @@
-# Ignore database files
 *.sqlite3
 *.db3
 .idea
 *.pyc
 venv
-# Add other database file extensions if needed
